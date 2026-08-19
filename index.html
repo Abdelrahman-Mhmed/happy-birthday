@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0710">
+  <meta name="description" content="عالم صغير فيه حكايتنا — عيد ميلاد سعيد ❤️">
+  <title>حكايتنا ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="intro" class="intro-screen" aria-label="شاشة البداية">
+    <div class="intro-stars"></div>
+    <div class="intro-content">
+      <p class="eyebrow reveal">بعض الحكايات تستحق أن نتذكرها...</p>
+      <h1 class="intro-line reveal">وحكايتنا واحدة منها <span>❤️</span></h1>
+      <h2 id="intro-name" class="intro-name reveal">[HER_NAME] ❤️</h2>
+      <p class="intro-sub reveal">كل سنة وانتي حبيبتي.</p>
+      <p class="intro-note reveal">عملتلك المكان ده عشان أحط فيه جزء من حكايتنا.</p>
+      <button id="start-btn" class="btn btn-primary reveal">ابدئي حكايتنا ❤️</button>
+    </div>
+  </div>
+
+  <div id="app" class="app" aria-hidden="true">
+    <header class="site-header">
+      <a href="#home" class="brand">حكايتنا <span>♥</span></a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      <nav id="nav" class="nav">
+        <a href="#home">البداية</a>
+        <a href="#story">البداية</a>
+        <a href="#timeline">الذكريات</a>
+        <a href="#gallery">الصور</a>
+        <a href="#letters">رسائل</a>
+        <a href="#song">أغنيتنا</a>
+        <a href="#future">المستقبل</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-copy reveal-on-scroll">
+          <span class="section-kicker">A little world for you</span>
+          <h1>كل سنة وانتي طيبة يا <span id="hero-name">[HER_NAME]</span> ❤️</h1>
+          <p class="hero-lead">النهارده مش مجرد يوم عيد ميلاد...</p>
+          <p class="hero-main">النهارده اليوم اللي اتولدت فيه أجمل حاجة حصلتلي.</p>
+          <a class="btn btn-primary" href="#story">تعالي نفتكر حكايتنا ↓</a>
+        </div>
+        <div class="hero-photo-wrap reveal-on-scroll">
+          <div class="photo-frame">
+            <img id="hero-photo" src="assets/images/photo-01.jpg" alt="صورتنا المميزة">
+          </div>
+          <div class="photo-glow"></div>
+        </div>
+        <div class="scroll-cue">اسحبي بهدوء <span>↓</span></div>
+      </section>
+
+      <section id="story" class="section story-section">
+        <div class="section-heading reveal-on-scroll">
+          <span class="section-kicker">Chapter 01</span>
+          <h2>كل حاجة بدأت من هنا...</h2>
+          <p>يمكن وقتها مكنّاش نعرف إن اللحظة الصغيرة دي هتفتح لنا حكاية كبيرة.</p>
+        </div>
+        <div id="story-timeline" class="timeline compact"></div>
+      </section>
+
+      <section id="timeline" class="section dark-section">
+        <div class="section-heading reveal-on-scroll">
+          <span class="section-kicker">Our story</span>
+          <h2>كل لحظة بقت ذكرى ❤️</h2>
+          <p>اضغطي على أي لحظة عشان نرجع لها سوا.</p>
+        </div>
+        <div id="memory-timeline" class="memory-timeline"></div>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="section-heading reveal-on-scroll">
+          <span class="section-kicker">Captured moments</span>
+          <h2>ذكرياتنا ❤️</h2>
+          <p>مش كل صورة بتحكي اللي حصل... بس كل صورة هنا بتفكرني بإحساس.</p>
+        </div>
+        <div id="gallery-grid" class="gallery-grid"></div>
+      </section>
+
+      <section id="letters" class="section letters-section">
+        <div class="section-heading reveal-on-scroll">
+          <span class="section-kicker">Letters from me</span>
+          <h2>حاجات يمكن مقلتهاش كفاية...</h2>
+          <p>افتحي واحدة واحدة. كل ظرف فيه حاجة من قلبي.</p>
+        </div>
+        <div id="letters-grid" class="letters-grid"></div>
+      </section>
+
+      <section id="song" class="section music-section">
+        <div class="music-shell reveal-on-scroll">
+          <div class="music-cover">
+            <img id="song-cover" src="assets/images/photo-01.jpg" alt="صورة الأغنية">
+            <div class="vinyl-ring"></div>
+          </div>
+          <div class="music-info">
+            <span class="section-kicker">Our song</span>
+            <h2>أغنيتنا 🎵</h2>
+            <h3 id="song-title">[SONG_TITLE]</h3>
+            <p id="song-artist">[ARTIST]</p>
+            <div class="equalizer" id="equalizer" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="player">
+              <button id="play-btn" class="round-btn" aria-label="تشغيل">▶</button>
+              <div class="track-area">
+                <input id="progress" type="range" min="0" max="100" value="0" aria-label="تقدم الأغنية">
+                <div class="time-row"><span id="current-time">0:00</span><span id="duration">0:00</span></div>
+              </div>
+              <label class="volume-control" aria-label="الصوت">🔊
+                <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+              </label>
+            </div>
+            <audio id="audio" preload="metadata"></audio>
+          </div>
+        </div>
+      </section>
+
+      <section id="videos" class="section dark-section">
+        <div class="section-heading reveal-on-scroll">
+          <span class="section-kicker">Moving memories</span>
+          <h2>لحظات تستحق إنها تتحرك ❤️</h2>
+          <p>أضيفي فيديوهاتك داخل <code>assets/videos/</code> ومن ثم ضعي أسماءها في CONFIG.</p>
+        </div>
+        <div id="videos-grid" class="videos-grid"></div>
+      </section>
+
+      <section id="details" class="section details-section">
+        <div class="section-heading reveal-on-scroll">
+          <span class="section-kicker">Little things</span>
+          <h2>مش بس بحبك... أنا بحب التفاصيل اللي فيكي.</h2>
+        </div>
+        <div id="details-grid" class="details-grid"></div>
+      </section>
+
+      <section id="emotional" class="emotional-section section">
+        <div class="emotional-stars"></div>
+        <div class="emotional-copy">
+          <span class="section-kicker">One thought</span>
+          <div id="emotional-text" class="emotional-text"></div>
+        </div>
+      </section>
+
+      <section id="future" class="section future-section">
+        <div class="section-heading reveal-on-scroll">
+          <span class="section-kicker">Chapter 02</span>
+          <h2>لسه في ذكريات كتير مستنيانا...</h2>
+          <p>الحكاية اللي فاتت جميلة، بس الأجمل إن لسه قدامنا كتير.</p>
+        </div>
+        <div id="future-grid" class="future-grid"></div>
+      </section>
+
+      <section id="favorite" class="favorite-section section">
+        <div class="favorite-wrap reveal-on-scroll">
+          <span class="section-kicker">Our favorite</span>
+          <div class="favorite-photo">
+            <img id="favorite-photo" src="assets/images/photo-01.jpg" alt="صورتنا المفضلة">
+            <div class="favorite-orbit"></div>
+          </div>
+          <p>في صور بتوثق لحظة...</p>
+          <strong>وفي صور بتوثق إحساس. ❤️</strong>
+        </div>
+      </section>
+
+      <section id="ending" class="ending-section section">
+        <div class="ending-stars"></div>
+        <div class="ending-content">
+          <span class="section-kicker">The last page</span>
+          <h2 id="ending-name">[HER_NAME]...</h2>
+          <div id="ending-lines" class="ending-lines"></div>
+          <h1>كل سنة وانتي حبيبتي ❤️</h1>
+          <p>الحكاية دي لسه مخلصتش...</p>
+          <p>دي مجرد بداية لفصول كتير لسه هنعيشها سوا.</p>
+          <div class="forever">Forever & Always ❤️</div>
+          <p id="signature" class="signature">— [MY_NAME]</p>
+        </div>
+        <button id="secret-heart" class="secret-heart" aria-label="مفاجأة سرية">♥</button>
+      </section>
+    </main>
+  </div>
+
+  <div id="memory-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close-modal aria-label="إغلاق">×</button>
+      <img id="modal-image" src="" alt="">
+      <div class="modal-body">
+        <span id="modal-date" class="modal-meta"></span>
+        <span id="modal-location" class="modal-meta"></span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="lightbox" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-lightbox></div>
+    <div class="lightbox-card" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close-lightbox aria-label="إغلاق">×</button>
+      <button id="lightbox-prev" class="lightbox-nav prev" aria-label="الصورة السابقة">‹</button>
+      <img id="lightbox-image" src="" alt="">
+      <button id="lightbox-next" class="lightbox-nav next" aria-label="الصورة التالية">›</button>
+      <div class="lightbox-caption">
+        <strong id="lightbox-title"></strong>
+        <span id="lightbox-description"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="video-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-video></div>
+    <div class="video-card">
+      <button class="modal-close" data-close-video aria-label="إغلاق">×</button>
+      <video id="modal-video" controls playsinline></video>
+    </div>
+  </div>
+
+  <div id="secret-modal" class="modal secret-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-secret></div>
+    <div class="secret-card">
+      <div class="secret-heart-big">♥</div>
+      <p class="section-kicker">You found it...</p>
+      <h2>لقيتي المفاجأة...</h2>
+      <p>بس لسه في حاجة أخيرة عايز أقولها.</p>
+      <div id="secret-message"></div>
+      <button class="btn btn-primary" data-close-secret>خلاص كده... ❤️</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
